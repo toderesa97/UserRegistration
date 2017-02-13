@@ -47,14 +47,19 @@ public class administratorJF extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        seekerField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        byusername = new javax.swing.JRadioButton();
-        byage = new javax.swing.JRadioButton();
-        bypassword = new javax.swing.JRadioButton();
-        byname = new javax.swing.JRadioButton();
-        bycity = new javax.swing.JRadioButton();
+        byname = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
+        byusername = new javax.swing.JTextField();
+        bypassword = new javax.swing.JTextField();
+        bycity = new javax.swing.JTextField();
+        byage = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,32 +94,27 @@ public class administratorJF extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Search for user"));
 
-        jLabel3.setText("Type...");
-
-        buttonGroup1.add(byusername);
-        byusername.setText("By username");
-        byusername.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                byusernameActionPerformed(evt);
-            }
-        });
-
-        buttonGroup1.add(byage);
-        byage.setText("By age");
-
-        buttonGroup1.add(bypassword);
-        bypassword.setText("By password");
-
-        buttonGroup1.add(byname);
-        byname.setText("By name");
-
-        buttonGroup1.add(bycity);
-        bycity.setText("By city");
-
         jButton3.setText("Seek");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("By name");
+
+        jLabel3.setText("By username");
+
+        jLabel4.setText("By password");
+
+        jLabel5.setText("By city");
+
+        jLabel6.setText("By age ");
+
+        jButton5.setText("Clear fields");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
             }
         });
 
@@ -123,48 +123,70 @@ public class administratorJF extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(byusername)
-                        .addGap(33, 33, 33)
-                        .addComponent(byage)
-                        .addGap(46, 46, 46)
-                        .addComponent(bypassword))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(seekerField, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(39, 39, 39)
-                                .addComponent(jButton3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(byname)
-                                .addGap(66, 66, 66)
-                                .addComponent(bycity)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel3))
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 39, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5))
+                        .addGap(42, 42, 42)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                        .addComponent(jButton3))
+                    .addComponent(byname, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(byage, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bycity, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bypassword, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(byusername, javax.swing.GroupLayout.Alignment.LEADING))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(byusername)
-                    .addComponent(byage)
-                    .addComponent(bypassword))
+                    .addComponent(byname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(byusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bypassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(byname)
-                    .addComponent(bycity))
-                .addGap(24, 24, 24)
+                    .addComponent(bycity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(byage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
-                    .addComponent(seekerField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton5))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
+
+        jButton4.setText("Log out!");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -172,34 +194,43 @@ public class administratorJF extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton2)
+                                .addGap(54, 54, 54)
+                                .addComponent(jButton1))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 766, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(70, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addGap(54, 54, 54)
-                        .addComponent(jButton1))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 766, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addContainerGap(70, Short.MAX_VALUE))
+                        .addComponent(jButton4)
+                        .addGap(22, 22, 22))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton4))
+                .addGap(17, 17, 17)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
+                        .addGap(120, 120, 120)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1)
-                            .addComponent(jButton2)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(43, Short.MAX_VALUE))
+                            .addComponent(jButton2))
+                        .addContainerGap(192, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         pack();
@@ -238,31 +269,39 @@ public class administratorJF extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void byusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byusernameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_byusernameActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
-        
-        
-        if(seekerField.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Field must not be empty");
+       String sql = prepareStatement();
+  
+        if(sql.equals("select * from my_users ")){
+            JOptionPane.showMessageDialog(null, "Must insert some text to search");
             return;
         }
-        
-        String sql = getSqlStatementBasedOnRadioButtons(seekerField.getText());
-        
-        if(sql.equals(".")){
-            JOptionPane.showMessageDialog(null, "You must select a mode search");
-            return;
-        }
-        
+       
         this.showTableData(sql);
         
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:4
+        int reply = JOptionPane.showConfirmDialog(null, "Really want to log out?");
+        if(reply == JOptionPane.YES_OPTION){
+            this.dispose();
+            new Login();
+        }
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        byname.setText("");
+        bypassword.setText("");
+        byage.setText("");
+        byusername.setText("");
+        bycity.setText("");
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -301,19 +340,24 @@ public class administratorJF extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JRadioButton byage;
-    private javax.swing.JRadioButton bycity;
-    private javax.swing.JRadioButton byname;
-    private javax.swing.JRadioButton bypassword;
-    private javax.swing.JRadioButton byusername;
+    private javax.swing.JTextField byage;
+    private javax.swing.JTextField bycity;
+    private javax.swing.JTextField byname;
+    private javax.swing.JTextField bypassword;
+    private javax.swing.JTextField byusername;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField seekerField;
     private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
         
@@ -353,28 +397,45 @@ public class administratorJF extends javax.swing.JFrame {
         }
     }
 
-    private String getSqlStatementBasedOnRadioButtons(String toBeSeek) {
-        String sqlStatement=".";
-        if(byusername.isSelected()){
-            sqlStatement = String.format("select * from my_users where username='%s'",
-                    toBeSeek);
+    private String prepareStatement() {
+        String sqlStatement="select * from my_users where ";
+        
+        if(!byname.getText().isEmpty()){
+            
+            sqlStatement += String.format("name='%s' ",byname.getText());
         }
-        if(byage.isSelected()){
-            sqlStatement = String.format("select * from my_users where age=%s",
-                    toBeSeek);
+        if(!byage.getText().isEmpty()){
+            if(sqlStatement.equals("select * from my_users where ")){
+                sqlStatement += String.format("age=%s ",byage.getText());
+            }else{
+                sqlStatement += String.format("and age=%s ",byage.getText());
+            }
         }
-        if(byname.isSelected()){
-            sqlStatement = String.format("select * from my_users where name='%s'",
-                    toBeSeek);
+        if(!byusername.getText().isEmpty()){
+            if(sqlStatement.equals("select * from my_users where ")){
+                sqlStatement += String.format("username='%s' ",byusername.getText());
+            }else{
+                sqlStatement += String.format("and username='%s' ",byusername.getText());
+            }
+            
         }
-        if(bypassword.isSelected()){
-            sqlStatement = String.format("select * from my_users where passwd='%s'",
-                    toBeSeek);
+        if(!bycity.getText().isEmpty()){
+            if(sqlStatement.equals("select * from my_users where ")){
+                sqlStatement += String.format("city='%s' ",bycity.getText());
+            }else{
+                sqlStatement += String.format("and city='%s' ",bycity.getText());
+            }
+            
         }
-        if(bycity.isSelected()){
-            sqlStatement = String.format("select * from my_users where city='%s'",
-                    toBeSeek);
+        if(!bypassword.getText().isEmpty()){
+            if(sqlStatement.equals("select * from my_users where ")){
+                sqlStatement += String.format("passwd='%s'",bypassword.getText());
+            }else{
+                sqlStatement += String.format("and passwd='%s'",bypassword.getText());
+            }
+            
         }
+        System.out.println(sqlStatement);
         return sqlStatement;
     }
 

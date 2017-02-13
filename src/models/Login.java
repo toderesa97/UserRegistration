@@ -112,7 +112,6 @@ public class Login extends javax.swing.JFrame {
                         username,passwd);
             
             if(cnx.prepareStatement(sql).executeQuery().next()){
-                 JOptionPane.showMessageDialog(null, "Acceso granted! :-)");
                  if(username.equals("admin")) new administratorJF();
             }else{
                 JOptionPane.showMessageDialog(null, "Debe comprobar sus datos");
